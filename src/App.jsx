@@ -11,7 +11,7 @@ function App() {
        setTodos(json.todos);
       })
     },2000) 
-  } , [])
+  } , []) //as weknow this is an infinte loop we need to pass something inside the dependency array so that the fetch call depends on something to run and not run infinitely
 
   return <div>
    {todos.map((todo) =>  <Todo key={todo.id} title={todo.title} description={todo.description} />)}
