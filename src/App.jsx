@@ -3,6 +3,8 @@ import React , {Fragment, useEffect, useState} from "react"
 function App() {
   const [todos,setTodos] = useState([]);
 
+  //what are hooks >> it helps u to manage state and describe state in your react application
+  
   useEffect(function(){
     setInterval(() => { //every 2 seconds the fwtch is called therefore random todos comes in our website evry 10 seconds coz the backend server responds with random set of todos.
       fetch("https://sum-server.100xdevs.com/todos")
